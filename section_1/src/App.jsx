@@ -7,7 +7,8 @@ const App = () => {
   const [text, setText] = useState("");
   const [open, setOpen] = useState(false);
   const onChangeText = (e) => setText(e.target.value);
-  const onClickOpen = () => setOpen(!open)
+  const onClickOpen = () => setOpen(!open);
+
   return (
     <div>
       <h1>Hello, World!</h1>
