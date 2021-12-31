@@ -9,7 +9,7 @@ import { memo } from 'react';
  * Surround definition with memo().
  */
 const ChildArea = memo((props) => {
-  const { open } = props;
+  const { open, onClickClose } = props;
 
   // Heavy processing ... !!
   const data = [...Array(2000).keys()];
@@ -30,6 +30,7 @@ const ChildArea = memo((props) => {
       {open ? (
         <div>
         <p>Child Component</p>
+        <button onClick={onClickClose}>Close</button>
       </div>
       ) : null}
     </>
