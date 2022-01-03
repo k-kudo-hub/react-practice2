@@ -1,4 +1,4 @@
-import classes from "./CssModules.module.css";
+import classes from "./CssModules.module.scss";
 
 export default function CssModules() {
   const { container, title, button } = classes;
