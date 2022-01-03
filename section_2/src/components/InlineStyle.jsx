@@ -1,5 +1,3 @@
-import Rect from 'react';
-
 const InlineStyle = () => {
   const containerStyle = {
     border: "solid 2px blue",
