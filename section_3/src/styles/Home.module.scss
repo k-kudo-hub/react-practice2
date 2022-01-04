@@ -1,0 +1,7 @@
+// CSSModulesとして使用する際はファイル名に.modules.scssを付与する
+.links {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
