@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { BaseButton } from "./BaseButton";
 
 const PrimaryButton = (props) => {
   const { children } = props;
@@ -7,17 +8,8 @@ const PrimaryButton = (props) => {
   );
 };
 
-const SButton = styled.button`
+const SButton = styled(BaseButton)`
   background-color: #40514e;
-  color: #fff;
-  padding: 6px 24px;
-  border: none;
-  border-radius: 9999px;
-  outline: none;
-  &:hover {
-    cursor: pointer;
-    opacity: 0.8;
-  }
 `
 
 export default PrimaryButton;
