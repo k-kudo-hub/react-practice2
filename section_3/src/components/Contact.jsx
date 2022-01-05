@@ -8,6 +8,7 @@ const Contact = () => {
       <h1>Contact is here!</h1>
       <nav className={links}>
         <Link to="/contact/1">URL Parameter</Link>
+        <Link to="/contact/1?name=hoge">Query Parameter</Link>
       </nav>
     </div>
   )
