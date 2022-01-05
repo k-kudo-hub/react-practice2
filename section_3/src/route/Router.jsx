@@ -4,11 +4,13 @@ import About from "../components/About";
 import AboutContentA from "../components/AboutContentA";
 import AboutContentB from "../components/AboutContentB";
 import Contact from "../components/Contact";
+import Page404 from "../components/Page404";
 import { ContactParameter } from "../components/ContactParameter";
 
 export const Router = () => {
   return (
     <Routes>
+      <Route path="*" element={<Page404/>}/>
       <Route path="/" element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="about/contentA" element={<AboutContentA />} />
