@@ -1,4 +1,8 @@
+import { useLocation } from "react-router-dom";
+
 const AboutContent_1 = () => {
+  const location = useLocation();
+  console.log(location);
   return (
     <div>
       <h2>About Content A</h2>
