@@ -9,7 +9,7 @@ export const Top = () => {
   const { setUserInfo } = useContext(UserContext);
   const onClickAdmin = () => {
     setUserInfo({ isAdmin: true });
-    navigate("/users")
+    navigate("/users");
   };
   const onClickGeneral = () => {
     setUserInfo({ isAdmin: false });
