@@ -1,8 +1,11 @@
 import { Router } from "./Route/Router";
+import { UserProvider } from "./providers/UserProvider";
 
 const App = () => {
   return (
-    <Router />
+    <UserProvider>
+      <Router />
+    </UserProvider>
   )
 }
 
