@@ -1,12 +1,11 @@
 import styled from "styled-components"
 import { SearchInput } from "../molecules/SearchInput";
 import { UserCard } from "../organisms/user/UserCard";
-import { useLocation } from "react-router";
 
 const users = [...Array(10).keys()].map(((val) => {
   return {
     id: val,
-    name: `Bond${val}`,
+    name: `Bond${val + 1}`,
     image: "https://source.unsplash.com/mJaD10XeD7w",
     email: "aaa@example.com",
     phone: "XXX-XXXX-XXXX",
@@ -18,17 +17,13 @@ const users = [...Array(10).keys()].map(((val) => {
 }))
 
 export const Users = () => {
-  const { state } = useLocation();
-  const isAdmin = state ? state.isAdmin : false;
-
-  console.log(state);
   return (
     <SContainer>
       <h2>Users PAGE</h2>
       <SearchInput />
       <SUserArea>
         {users.map((user) => (
-          <UserCard key={user.id} user={user} isAdmin={isAdmin} />
+          <UserCard key={user.id} user={user} />
         ))}
       </SUserArea>
     </SContainer>
