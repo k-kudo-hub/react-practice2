@@ -1,11 +1,14 @@
 import styled from "styled-components"
 import { SearchInput } from "../molecules/SearchInput";
 import { UserCard } from "../organisms/user/UserCard";
+import SecondaryButton from "../atoms/button/SecondaryButton";
+import { useRecoilState } from "recoil";
+import { userState } from "../../store/userState";
 
 const users = [...Array(10).keys()].map(((val) => {
   return {
     id: val,
-    name: `Bond${val}`,
+    name: `Bond${val + 1}`,
     image: "https://source.unsplash.com/mJaD10XeD7w",
     email: "aaa@example.com",
     phone: "XXX-XXXX-XXXX",
@@ -17,10 +20,16 @@ const users = [...Array(10).keys()].map(((val) => {
 }))
 
 export const Users = () => {
+  const [userInfo, setUserInfo] = useRecoilState(userState);
+
+  const onClickSwitch = () => {
+    setUserInfo({ isAdmin: !userInfo.isAdmin })
+  };
   return (
     <SContainer>
       <h2>Users PAGE</h2>
       <SearchInput />
+      <SecondaryButton onClick={onClickSwitch}>Switch</SecondaryButton>
       <SUserArea>
         {users.map((user) => (
           <UserCard key={user.id} user={user} />
