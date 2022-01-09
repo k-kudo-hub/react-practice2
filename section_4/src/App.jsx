@@ -1,11 +1,14 @@
 import { Router } from "./Route/Router";
 import { UserProvider } from "./providers/UserProvider";
+import { RecoilRoot } from "recoil";
 
 const App = () => {
   return (
-    <UserProvider>
-      <Router />
-    </UserProvider>
+    <RecoilRoot>
+      <UserProvider>
+        <Router />
+      </UserProvider>
+    </RecoilRoot>
   )
 }
 
