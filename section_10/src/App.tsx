@@ -27,7 +27,7 @@ const App = () => {
       <h1>Hello, React * TypeScript</h1>
       <button onClick={onClickFetchData}>Get data</button>
       {todos.map((todo) => (
-        <Todo key={todo.id} title={todo.title} userId={todo.userId}/>
+        <Todo key={todo.id} title={todo.title} userId={todo.userId} completed={todo.completed}/>
       ))}
     </div>
   )
