@@ -3,7 +3,7 @@ import { TodoType } from "./types/todo";
 
 export const Todo = (
   // "id" is not needed. So, use "Pick" to select other items from the TodoType. 
-  props: Pick<TodoType, "userId" | "title" | "completed">
+  props: Omit<TodoType, "id">
 ) => {
   const { title, userId, completed = false } = props;
   const completeMark = completed ? "[x]" : "[ ]";
