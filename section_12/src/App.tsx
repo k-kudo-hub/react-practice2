@@ -1,9 +1,10 @@
 import React from 'react';
+import { ChakraProvider, Button } from '@chakra-ui/react';
 
 export default function App() {
   return (
-    <div>
-      <h1>Hello, world!</h1>
-    </div>
+    <ChakraProvider>
+      <Button colorScheme="teal">Button</Button>
+    </ChakraProvider>
   )
 }
