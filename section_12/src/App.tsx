@@ -10,7 +10,6 @@ export default function App() {
     <ChakraProvider theme={theme}>
       <BrowserRouter>
         <Router/>
-        <Button colorScheme="teal">Button</Button>
       </BrowserRouter>
     </ChakraProvider>
   )
