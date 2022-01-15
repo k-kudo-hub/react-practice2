@@ -18,7 +18,7 @@ export const useAllUsers = () => {
         showMessage({ title: "Failed to get users data.", status: "error" });
       })
       .finally(() => setLoading(false))
-  }, []);
+  }, [showMessage]);
 
   return { getUsers, loading, users }
 }
